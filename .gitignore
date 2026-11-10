@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual env
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# DropTidy 本地数据（个人配置与操作日志，不公开）
+data/config.json
+data/*.json
+data/undo.log
+
+# OS
+.DS_Store
+Thumbs.db
