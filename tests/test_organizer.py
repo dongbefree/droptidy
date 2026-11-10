@@ -2,14 +2,18 @@
 
 from __future__ import annotations
 
+import tempfile
+from pathlib import Path
+
 import pytest
 
 from droptidy import config, organizer
 
 
 @pytest.fixture
-def tmp_cfg(tmp_path, monkeypatch):
+def tmp_cfg(monkeypatch):
     """Point drop zone / targets at temp dirs and stub the config file."""
+    tmp_path = Path(tempfile.mkdtemp())
     drop = tmp_path / "drop"
     drop.mkdir()
     data_dir = tmp_path / "data"
